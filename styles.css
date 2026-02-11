@@ -282,7 +282,6 @@ b {
   font-style: italic;
 }
 
-
 .hero__subheadline {
   font-size: 18px;
   line-height: 1.6;
@@ -298,7 +297,6 @@ b {
   color: var(--prestige-gold);
   font-weight: 600;
 }
-
 
 /* BADGES */
 
@@ -578,7 +576,6 @@ b {
   padding: 16px;
 }
 
-
 .specialist-card:hover {
   border-color: var(--conversion-orange);
   transform: translateY(-4px);
@@ -649,7 +646,9 @@ b {
   border-radius: var(--border-radius-md);
   background: var(--white);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .team__card:hover {
@@ -698,7 +697,6 @@ b {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 
 /* FOOTER */
 .footer {
