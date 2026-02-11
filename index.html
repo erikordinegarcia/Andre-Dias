@@ -12,6 +12,41 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner__content">
+      <p>
+        <strong>Sua privacidade é nossa prioridade.</strong><br />
+        Utilizamos cookies para garantir o funcionamento correto do site e melhorar sua experiência.
+        Para saber mais, acesse nossa
+        <a href="lgpd.html" target="_blank">Política de Privacidade</a>.
+      </p>
+
+      <div class="cookie-banner__actions">
+        <button id="acceptCookies" class="cookie-btn cookie-btn--primary">Aceitar Cookies</button>
+        <button class="cookie-btn cookie-btn--secondary">Gerenciar Preferências</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // COOKIE BANNER
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('acceptCookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+      cookieBanner.style.display = 'block';
+    } else {
+      cookieBanner.style.display = 'none';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      cookieBanner.style.display = 'none';
+    });
+  </script>
+
   <body id="top">
     <!-- HEADER -->
     <header class="header">
@@ -129,6 +164,12 @@
             </div>
 
             <button type="submit" class="capture-form__submit">Solicitar Atendimento</button>
+
+            <p class="form-consent">
+              Ao enviar seus dados, você concorda que a André Dias Advogados utilize estas
+              informações para entrar em contato e atender sua solicitação, nos termos da nossa
+              <a href="lgpd.html" target="_blank">Política de Privacidade</a>.
+            </p>
 
             <p class="capture-form__privacy">🔒 Dados protegidos (LGPD)</p>
           </form>
@@ -386,7 +427,7 @@
             <ul>
               <li><a href="#">Política de Privacidade</a></li>
               <li><a href="#">Termos de Uso</a></li>
-              <li><a href="#">LGPD</a></li>
+              <li><a href="lgpd.html">LGPD</a></li>
             </ul>
           </div>
         </div>
