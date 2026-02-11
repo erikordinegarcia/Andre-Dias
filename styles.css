@@ -23,7 +23,7 @@
   --spacing-20: 20px;
   --spacing-24: 24px;
   --spacing-32: 32px;
-  --spacing-40: 40px;
+  --spacing-40: 30px;
   --spacing-48: 48px;
   --spacing-60: 60px;
   --spacing-80: 80px;
@@ -193,7 +193,7 @@ b {
 }
 .header__logo {
   cursor: pointer;
-  width: 150px;
+  width: 180px;
 }
 
 .header__phones {
@@ -207,7 +207,7 @@ b {
   border-radius: var(--border-radius-sm);
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
   cursor: pointer;
   display: inline-block;
@@ -566,6 +566,18 @@ b {
   transition: all 0.3s ease;
   text-align: center;
 }
+
+.specialist-card .btn {
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 16px;
+}
+
 
 .specialist-card:hover {
   border-color: var(--conversion-orange);
