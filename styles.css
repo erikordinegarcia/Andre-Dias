@@ -55,6 +55,12 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: var(--graphite);
+  background-color: var(--primary-blue);
+}
+
+.section,
+.section--alternate,
+.footer {
   background-color: var(--white);
 }
 
@@ -252,7 +258,18 @@ b {
   background-color: var(--white);
   border-bottom: 1px solid var(--light-border);
   padding: var(--spacing-16) 0;
-  transition: box-shadow 0.3s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.3s ease;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+}
+
+/* Sombra quando aparece após scroll */
+.header--scrolled {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .header--scrolled {
@@ -316,7 +333,7 @@ b {
 
 .hero {
   background:
-    linear-gradient(135deg, rgba(26,54,93,0.95), rgba(26,32,44,0.95)),
+    linear-gradient(135deg, rgba(26, 54, 93, 0.95), rgba(26, 32, 44, 0.95)),
     url('assets/fechada.jpeg');
   background-size: cover;
   background-position: center;
@@ -835,14 +852,15 @@ b {
   width: 24px;
   height: 24px;
   filter: brightness(0) invert(1);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .footer__social a:hover img {
   transform: scale(1.1);
   opacity: 0.8;
 }
-
 
 .footer__column h4 {
   color: var(--white);
@@ -945,5 +963,19 @@ b {
   .badge {
     font-size: 11px;
     padding: var(--spacing-8) var(--spacing-12);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__phone-btn--geral {
+    display: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .header__phone-btn {
+    font-size: 14px;
+    padding: 12px;
   }
 }

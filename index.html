@@ -13,58 +13,39 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <!-- COOKIE BANNER -->
-  <div class="cookie-banner" id="cookieBanner">
-    <div class="cookie-banner__content">
-      <p>
-        <strong>Sua privacidade é nossa prioridade.</strong><br />
-        Utilizamos cookies para garantir o funcionamento correto do site e melhorar sua experiência.
-        Para saber mais, acesse nossa
-        <a href="lgpd.html" target="_blank">Política de Privacidade</a>.
-      </p>
+  <body id="top">
+    <!-- COOKIE BANNER -->
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-banner__content">
+        <p>
+          <strong>Sua privacidade é nossa prioridade.</strong><br />
+          Utilizamos cookies para garantir o funcionamento correto do site e melhorar sua
+          experiência. Para saber mais, acesse nossa
+          <a href="lgpd.html" target="_blank" rel="noopener">Política de Privacidade</a>.
+        </p>
 
-      <div class="cookie-banner__actions">
-        <button id="acceptCookies" class="cookie-btn cookie-btn--primary">Aceitar Cookies</button>
-        <button class="cookie-btn cookie-btn--secondary">Gerenciar Preferências</button>
+        <div class="cookie-banner__actions">
+          <button id="acceptCookies" class="cookie-btn cookie-btn--primary">Aceitar Cookies</button>
+          <button class="cookie-btn cookie-btn--secondary">Gerenciar Preferências</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    // COOKIE BANNER
-    const cookieBanner = document.getElementById('cookieBanner');
-    const acceptBtn = document.getElementById('acceptCookies');
-
-    if (!localStorage.getItem('cookiesAccepted')) {
-      cookieBanner.style.display = 'block';
-    } else {
-      cookieBanner.style.display = 'none';
-    }
-
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('cookiesAccepted', 'true');
-      cookieBanner.style.display = 'none';
-    });
-  </script>
-
-  <body id="top">
     <!-- HEADER -->
     <header class="header">
       <div class="container header__container">
         <div class="header__logo-container">
-          <a href="#top" aria-label="Ir para a página inicial">
+          <a href="#top">
             <img src="assets/logo.png" alt="André Dias Advogados" class="header__logo" />
           </a>
         </div>
 
-        <!-- CONTATOS -->
         <div class="header__phones">
           <a
             href="https://wa.me/5511938059405?text=Olá! Preciso de atendimento CRIMINAL URGENTE."
             class="header__phone-btn header__phone-btn--criminal"
             target="_blank"
             rel="noopener"
-            aria-label="WhatsApp Criminal"
           >
             🚨 Criminal: 11-93805-9405
           </a>
@@ -74,7 +55,6 @@
             class="header__phone-btn header__phone-btn--geral"
             target="_blank"
             rel="noopener"
-            aria-label="WhatsApp Demais Áreas"
           >
             📞 Demais Áreas: 11-5050-6310
           </a>
@@ -85,7 +65,6 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container hero__container">
-        <!-- TEXTO -->
         <div class="hero__content">
           <span class="hero__eyebrow">Advocacia Especializada</span>
 
@@ -111,38 +90,24 @@
           </div>
         </div>
 
-        <!-- FORMULÁRIO -->
+        <!-- FORM -->
         <div class="hero__form-container">
           <form class="capture-form" id="captureForm">
             <h3 class="capture-form__title">Fale com um Especialista</h3>
 
             <div class="capture-form__group">
               <label for="nome" class="capture-form__label">Nome Completo</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                class="capture-form__input"
-                placeholder="Seu nome"
-                required
-              />
+              <input type="text" id="nome" class="capture-form__input" required />
             </div>
 
             <div class="capture-form__group">
               <label for="whatsapp" class="capture-form__label">WhatsApp</label>
-              <input
-                type="tel"
-                id="whatsapp"
-                name="whatsapp"
-                class="capture-form__input"
-                placeholder="(11) 9XXXX-XXXX"
-                required
-              />
+              <input type="tel" id="whatsapp" class="capture-form__input" required />
             </div>
 
             <div class="capture-form__group">
               <label for="area" class="capture-form__label">Área Jurídica</label>
-              <select id="area" name="area" class="capture-form__select" required>
+              <select id="area" class="capture-form__select" required>
                 <option value="">Selecione</option>
                 <option value="Criminal">Criminal</option>
                 <option value="Trabalhista">Trabalhista</option>
@@ -154,13 +119,7 @@
 
             <div class="capture-form__group">
               <label for="mensagem" class="capture-form__label">Mensagem</label>
-              <textarea
-                id="mensagem"
-                name="mensagem"
-                class="capture-form__textarea"
-                placeholder="Descreva brevemente seu caso"
-                required
-              ></textarea>
+              <textarea id="mensagem" class="capture-form__textarea" required></textarea>
             </div>
 
             <button type="submit" class="capture-form__submit">Solicitar Atendimento</button>
@@ -168,7 +127,7 @@
             <p class="form-consent">
               Ao enviar seus dados, você concorda que a André Dias Advogados utilize estas
               informações para entrar em contato e atender sua solicitação, nos termos da nossa
-              <a href="lgpd.html" target="_blank">Política de Privacidade</a>.
+              <a href="lgpd.html" target="_blank" rel="noopener">Política de Privacidade</a>.
             </p>
 
             <p class="capture-form__privacy">🔒 Dados protegidos (LGPD)</p>
@@ -449,7 +408,6 @@
                   aria-label="Instagram"
                 >
                   <img src="assets/instagram.png" alt="Instagram" />
-
                 </a>
 
                 <a
@@ -467,7 +425,7 @@
             <h4>Links</h4>
             <ul>
               <li><a href="#">Política de Privacidade</a></li>
-              <li><a href="#">Termos de Uso</a></li>
+              <li><a href="termos.html">Termos de Uso</a></li>
               <li><a href="lgpd.html">LGPD</a></li>
             </ul>
           </div>
@@ -478,41 +436,12 @@
       </div>
     </footer>
 
-    <!-- WHATSAPP FLUTUANTE -->
-    <a
-      class="wppFloat"
-      target="_blank"
-      rel="noopener"
-      href="https://wa.me/5511938059405"
-      aria-label="WhatsApp"
-    >
-      <img src="assets/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+    <!-- WHATSAPP FLOAT -->
+    <a class="wppFloat" target="_blank" rel="noopener" href="https://wa.me/5511938059405">
+      <img src="assets/whatsapp.png" alt="WhatsApp" />
     </a>
 
-    <!-- JAVASCRIPT -->
-    <script>
-      document.getElementById('captureForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const nome = document.getElementById('nome').value;
-        const whatsapp = document.getElementById('whatsapp').value;
-        const area = document.getElementById('area').value;
-        const mensagem = document.getElementById('mensagem').value;
-
-        const numero = area === 'Criminal' ? '5511938059405' : '551150506310';
-
-        const texto = `
-            Olá! Meu nome é ${nome}.
-            WhatsApp: ${whatsapp}
-            Área: ${area}
-            Mensagem: ${mensagem}
-            `.trim();
-
-        const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-        window.open(url, '_blank');
-
-        this.reset();
-      });
-    </script>
+    <!-- SCRIPT EXTERNO -->
+    <script src="script.js"></script>
   </body>
 </html>
